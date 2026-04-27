@@ -7,11 +7,11 @@ static class Program
 {
     static void Main(string[] args)
     {
-        System.Console.Write("数値を入力してください->");
-        var value = System.Console.ReadLine();
+        Console.Write("数値を入力してください->");
+        var value = Console.ReadLine();
           
-        System.Console.WriteLine($"5を加算した結果は{int.Parse(value) + 5}です");
-        System.Console.WriteLine($"5を減算した結果は{int.Parse(value) - 5}です");
+        Console.WriteLine($"5を加算した結果は{int.Parse(value) + 5}です");
+        Console.WriteLine($"5を減算した結果は{int.Parse(value) - 5}です");
 
     }
 }

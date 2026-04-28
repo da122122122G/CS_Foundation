@@ -14,7 +14,7 @@ public class Item
     public string itemName; ///商品名
     public int price;       ///単価
     public double salesTaxRate = 0.10;  ///消費税
-    public int total;
+    public int PriceIncludingTax;
 
     public void Print()
     {
@@ -22,13 +22,13 @@ public class Item
         Console.WriteLine($"商品番号={itemNo}");
         Console.WriteLine($"商品名={itemName}");
         Console.WriteLine($"値段={price}");
-        Console.WriteLine($"税込み金額={total}");
+        Console.WriteLine($"税込み金額={PriceIncludingTax}");
     }
 
     public int CalculateTaxAmount()
     {
-        total = (int)(price * (1 + salesTaxRate));
-        return total;
+        PriceIncludingTax = (int)(price * (1 + salesTaxRate));
+        return PriceIncludingTax;
     }
 
 

@@ -1,9 +1,6 @@
-﻿using System.Globalization;
-
-namespace Example;
+﻿namespace Ex_02_05;
 
 static class Program
-
 {
     static void Main(string[] args)
     {
@@ -12,13 +9,12 @@ static class Program
 
         if (Number % 2 == 1)
         {
-            Console.WriteLine("結果:"+Number);
+            Console.WriteLine("結果:" + Number);
         }
 
         else
         {
-            Console.WriteLine($"結果:{Number*10}");
+            Console.WriteLine($"結果:{Number * 10}");
         }
-        
     }
 }

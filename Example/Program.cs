@@ -8,33 +8,25 @@ static class Program
 {
     static void Main(string[] args)
     {
-        for (int i = 1; i <= 100; i++)
+        string day = "本日";
+        string wether = "晴れ";
+        // 可変数の引数を渡せる
+        StringConcatenation(day, "は", wether, "です。");
+        /// <summary>
+        /// 引数の文字列を結合して表示する
+        /// </summary>
+        /// <param name="strings">結合する文字列</param>
+        static void StringConcatenation(params string[] strings)
         {
-            if (i == 100)
+            var result = "";
+            for (int i = 0; i < strings.Length; i++)
             {
-                Console.Write("Buzz");
+                result += strings[i];
             }
-
-            else if (i % 15 == 0)
-            {
-                Console.Write("FizzBuzz,");
-            }
-
-            else if (i % 3 == 0)
-            {
-                Console.Write("Fizz,");
-            }
-
-            else if (i % 5 == 0)
-            {
-                Console.Write("Buzz,");
-            }
-
-            else
-            {
-                Console.Write(i + ",");
-            }
-
+            Console.WriteLine(result);
         }
+
     }
+
+
 }

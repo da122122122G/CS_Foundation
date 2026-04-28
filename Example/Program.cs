@@ -7,11 +7,14 @@ static class Program
 {
     static void Main(string[] args)
     {
-        var count = 1;
-        while (count < 8)
+        for (int i = 0; i <= 6; i++)
         {
-            count *= 2;
-            Console.WriteLine($"count *= {count}");
+            if (i == 2)
+            {
+                continue;
+            }
+            Console.WriteLine($"i = {i}");
         }
+        Console.WriteLine("終了");
     }
 }

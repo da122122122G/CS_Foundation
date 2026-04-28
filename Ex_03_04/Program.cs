@@ -4,6 +4,7 @@ static class Program
 {
     static void Main(string[] args)
     {
+
         Item item = new();    ///アイテム・インスタンスの生成
 
         Console.Write("商品番号を入力してください->");

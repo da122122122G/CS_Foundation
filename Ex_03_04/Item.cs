@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Ex_03_03;
+namespace Ex_03_04;
 ///<summary>
 /// 商品情報を表すクラス
 /// </summary>
@@ -13,6 +13,8 @@ public class Item
     public int itemNo; ///商品番号
     public string itemName; ///商品名
     public int price;       ///単価
+    public double salesTaxRate = 0.10;  ///消費税
+    public int total;
 
     public void Print()
     {
@@ -20,11 +22,15 @@ public class Item
         Console.WriteLine($"商品番号={itemNo}");
         Console.WriteLine($"商品名={itemName}");
         Console.WriteLine($"値段={price}");
-    } ///itemNo、itemName、priceフィールドの値を出力する。
-
-    public void ChangePrice(int newPrice)
-    {
-        price = newPrice;
+        Console.WriteLine($"税込み金額={total}");
     }
+
+    public int CalculateTaxAmount()
+    {
+        total = (int)(price * (1 + salesTaxRate));
+        return total;
+    }
+
+
 
 }

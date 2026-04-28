@@ -1,4 +1,4 @@
-﻿namespace Ex_03_03;
+﻿namespace Ex_03_04;
 
 static class Program
 {
@@ -15,10 +15,7 @@ static class Program
         Console.Write("単価を入力してください->");
         item.price = int.Parse(Console.ReadLine());
 
-        Console.Write("新しい単価を入力してください->");
-        int newPrice = int.Parse(Console.ReadLine());
-
-        item.ChangePrice(newPrice);
+        item.CalculateTaxAmount();
 
         item.Print();
     }

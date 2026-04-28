@@ -7,18 +7,11 @@ static class Program
 {
     static void Main(string[] args)
     {
-        Console.Write("数値を入力してください->");
-        int Number = int.Parse(Console.ReadLine());
-
-        if (Number % 2 == 1)
+        var count = 1;
+        while (count < 8)
         {
-            Console.WriteLine("結果:"+Number);
+            count *= 2;
+            Console.WriteLine($"count *= {count}");
         }
-
-        else
-        {
-            Console.WriteLine($"結果:{Number*10}");
-        }
-        
     }
 }

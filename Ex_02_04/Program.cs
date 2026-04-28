@@ -5,21 +5,23 @@ static class Program
     static void Main(string[] args)
     {
         int[] insert = new int[3];
+        int i = 0;
 
-        Console.Write("数値1を入力してください->");
-        var a = Console.ReadLine();
-        Console.Write("数値2を入力してください->");
-        var b = Console.ReadLine();
-        Console.Write("数値3を入力してください->");
-        var c = Console.ReadLine();
+        Console.Write($"数値{i+1}を入力してください->");
+        insert[i++] = int.Parse(Console.ReadLine());
 
-        insert[0] = int.Parse(a);
-        insert[1] = int.Parse(b);
-        insert[2] = int.Parse(c);
+
+        Console.Write($"数値{i+1}を入力してください->");
+        insert[i++] = int.Parse(Console.ReadLine());
+
+
+        Console.Write($"数値{i+1}を入力してください->");
+        insert[i++] = int.Parse(Console.ReadLine());
+
 
         Console.WriteLine("入力結果");
-        Console.WriteLine($"数値1:{insert[0]}");
-        Console.WriteLine($"数値2:{insert[1]}");
-        Console.WriteLine($"数値3:{insert[2]}");
+        Console.WriteLine("数値1:"+insert[0]);
+        Console.WriteLine("数値2:"+insert[1]);
+        Console.WriteLine("数値3:"+insert[2]);
     }
 }

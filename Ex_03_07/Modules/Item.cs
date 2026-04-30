@@ -16,7 +16,9 @@ namespace Ex_03_07.Modules
         /// 
         public void Print()
         {
-
+            Console.WriteLine($"商品番号={ItemNo}");
+            Console.WriteLine($"商品名={ItemName}");
+            Console.WriteLine($"単価={Price}");
         }
     }
 }

@@ -1,7 +1,6 @@
 ﻿using System.Diagnostics.Contracts;
-using System.Net.ServerSentEvents;
 
-namespace Ex_03_05;
+namespace Ex_03_06;
 
 static class Program
 {
@@ -14,13 +13,21 @@ static class Program
         Console.Write("単価を入力してください->");
         int price = int.Parse(Console.ReadLine());
 
-
-        ///インスタンス作成
         Item item1 = new(no, name, price);
 
+        Console.Write("新しい単価を入力してください->");
+        var newPrice = Console.ReadLine();
 
-
-        ///出力
+        item1.ChangePrice(newPrice);
         item1.Print();
+
+        Console.Write("さらに新しい単価を入力してください->");
+        int newPrice2 = int.Parse(Console.ReadLine());
+
+        item1.ChangePrice(newPrice2);
+
+        item1.Print();
+
+
     }
 }

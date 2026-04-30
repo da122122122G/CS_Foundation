@@ -16,16 +16,11 @@ static class Program
         Item item1 = new(no, name, price);
 
         Console.Write("新しい単価を入力してください->");
-        var newPrice = Console.ReadLine();
-
-        item1.ChangePrice(newPrice);
+        item1.ChangePrice(Console.ReadLine());
         item1.Print();
 
         Console.Write("さらに新しい単価を入力してください->");
-        int newPrice2 = int.Parse(Console.ReadLine());
-
-        item1.ChangePrice(newPrice2);
-
+        item1.ChangePrice(Console.ReadLine());
         item1.Print();
 
 

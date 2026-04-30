@@ -8,18 +8,20 @@ namespace Example
     /// <summary>
     /// 人物を表すクラス
     /// </summary>
+    /// <summary>
+    /// 人物を表すクラス
+    /// </summary>
     public class Human
     {
-        public string Name { get; set; }
-        public int Hp { get; private set; }
+        public int Hp { get; protected set; } = 10;
 
-        public void Greet()
+        public virtual void Greet()
         {
-            Console.WriteLine("Hi!");
+            Console.WriteLine("こんにちは！");
         }
-
-        public void Defence(int damage)
+        public virtual void Defence(int damage)
         {
+            Console.WriteLine($"{damage}のダメージを受けた");
             Hp -= damage;
         }
     }

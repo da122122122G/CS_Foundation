@@ -10,13 +10,16 @@ namespace Example
   /// </summary>
   public class Warrior : Human
   {
-    public int Ap { get; set; } = 5;
-    public int Dp { get; set; }
-
-    public void Attack()
+    public int Dp { get; private set; } = 3;
+    public override void Greet()
     {
-      Console.WriteLine("どうだっ！\n戦士は攻撃した！");
-      Console.WriteLine($"{Ap}のダメージを与えた。");
+      base.Greet();//親クラスの挨拶メソッドを呼び出し
+      Console.WriteLine("戦士です！");
+    }
+    public override void Defence(int damage)
+    {
+      Console.WriteLine("戦士は盾で防いだ");
+      base.Defence(damage - Dp);//親クラスの防御メソッドを呼び出し
     }
   }
 }

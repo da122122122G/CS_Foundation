@@ -9,10 +9,16 @@ static class Program
 {
     static void Main(string[] args)
     {
-        Warrior warrior = new Warrior();
-        warrior.Ap = 10;
-        warrior.Greet();//Humanクラスのメソッドの呼び出し
-        warrior.Attack();//Warriorクラスのメソッドの呼び出し
+        Human human = new();
+        Warrior warrior = new();
+
+        human.Greet();
+        warrior.Greet();
+
+        Console.WriteLine("矢が降ってきた！");
+        human.Defence(5);
+        Console.WriteLine("矢が降ってきた！");
+        warrior.Defence(5);
     }
 }
 

@@ -15,16 +15,19 @@ namespace Example
         public int ap = 5;      // 攻撃力を表すフィールド
         public int dp;          // 防御力を表すフィールド
 
+
         /// <summary>
         /// コンストラクタ
         /// </summary>
-        /// <param name="name">nameフィールドに設定する値</param>
-        /// <param name="hp">hpフィールドに設定する値</param>
-        public Warrior(string name, int hp, int ap)
+        public Warrior(string name)
+        {
+            this.name = name;
+        }
+
+        public Warrior(string name, int hp)
         {
             this.name = name;
             this.hp = hp;
-            this.ap = ap;
         }
 
         /// <summary>

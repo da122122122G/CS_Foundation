@@ -9,12 +9,10 @@ static class Program
 {
     static void Main(string[] args)
     {
-        Warrior warrior = new();
-        warrior.Name = "戦士";
-
-        ///Console.WriteLine(warrior.Name);
-        warrior.Hp = 10;//setアクセッサがprivateなので設定不可
-        warrior.Ap = 10;//読み取り専用プロパティなので設定不可
+        Warrior warrior = new Warrior();
+        warrior.Ap = 10;
+        warrior.Greet();//Humanクラスのメソッドの呼び出し
+        warrior.Attack();//Warriorクラスのメソッドの呼び出し
     }
 }
 

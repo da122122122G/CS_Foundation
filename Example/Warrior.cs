@@ -4,14 +4,19 @@ using System.Linq;
 using System.Threading.Tasks;
 
 namespace Example
-{ /// <summary>
+{
+  /// <summary>
   /// 戦士を表すクラス
   /// </summary>
-    public class Warrior
+  public class Warrior : Human
+  {
+    public int Ap { get; set; } = 5;
+    public int Dp { get; set; }
+
+    public void Attack()
     {
-        public string Name { get; set; } = "ユータ"; // 名前を表すプロパティ
-        public int Hp { get; private set; } = 10;   // 体力を表すプロパティ
-        public int Ap { get; } = 5; // 攻撃力を表すプロパティ
-        public int Dp { get; }      // 防御力を表すプロパティ
+      Console.WriteLine("どうだっ！\n戦士は攻撃した！");
+      Console.WriteLine($"{Ap}のダメージを与えた。");
     }
+  }
 }

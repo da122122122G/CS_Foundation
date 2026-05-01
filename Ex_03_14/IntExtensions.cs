@@ -8,9 +8,9 @@ namespace Ex_03_14
     public static class IntExtensions
     {
 
-        public static int Add(this int a, int b)
+        public static int Add(this int a, int b, int c)
         {
-            return a + b;
+            return a + b + c;
         }
 
         public static double Average(this int a, int b)

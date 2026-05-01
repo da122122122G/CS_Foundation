@@ -10,10 +10,7 @@ namespace Ex_03_13
         public static double PI = 3.14;
         int radius;
 
-        public Circle(int pradius)
-        {
-            this.radius = pradius;
-        }
+
 
         public double AreaCalculation()
         {
@@ -23,6 +20,11 @@ namespace Ex_03_13
         public static double AreaCalculation(int radius)
         {
             return radius * radius * PI;
+        }
+
+        public Circle(int pradius)
+        {
+            radius = pradius;
         }
 
 

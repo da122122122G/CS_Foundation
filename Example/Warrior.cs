@@ -6,20 +6,18 @@ using System.Threading.Tasks;
 namespace Example
 {
   /// <summary>
-  /// 戦士を表すクラス
+  /// 戦えるものの概念を実装した戦士のクラス
   /// </summary>
-  public class Warrior : Human
+  public class Warrior : IFight
   {
-    public int Dp { get; private set; } = 3;
-    public override void Greet()
+    public void Attack()
     {
-      base.Greet();//親クラスの挨拶メソッドを呼び出し
-      Console.WriteLine("戦士です！");
+      Console.WriteLine("戦士は剣で攻撃した");
     }
-    public override void Defence(int damage)
+
+    public void Defence(int damage)
     {
-      Console.WriteLine("戦士は盾で防いだ");
-      base.Defence(damage - Dp);//親クラスの防御メソッドを呼び出し
+      Console.WriteLine($"戦士は盾で防御して{damage / 2}ダメージをうけた");
     }
   }
 }

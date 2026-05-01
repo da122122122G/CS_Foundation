@@ -9,16 +9,19 @@ static class Program
 {
     static void Main(string[] args)
     {
-        Human human = new();
-        Warrior warrior = new();
+        IFight warrior = new Warrior();//より大きい概念に代入できる
+        IFight magician = new Magician();//より大きい概念に代入できる
 
-        human.Greet();
-        warrior.Greet();
+        warrior.Attack();//IFight型の変数だが実際に実行されるのは戦士のメソッド
+        magician.Attack();//IFight型の変数だが実際に実行されるのは魔法使いのメソッド
 
-        Console.WriteLine("矢が降ってきた！");
-        human.Defence(5);
-        Console.WriteLine("矢が降ってきた！");
-        warrior.Defence(5);
+        IFight[] fighters = new IFight[2];
+        fighters[0] = warrior;
+        fighters[1] = magician;
+        foreach (IFight fighter in fighters)
+        {
+            fighter.Defence(10);//それぞれの実装クラスのメソッドが実行される
+        }
     }
 }
 

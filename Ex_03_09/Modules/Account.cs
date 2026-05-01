@@ -7,9 +7,9 @@ namespace Ex_03_09.Modules
 {
     public class Account
     {
-        public string? AccountNo { get; set; }
-        public string? AccountName { get; set; }
-        public int Balance { get; set; }
+        private string? AccountNo { get; set; }
+        private string? AccountName { get; set; }
+        private int Balance { get; set; }
 
         public Account(string AccountNo, string AccountName, int Balance)
         {
@@ -27,7 +27,7 @@ namespace Ex_03_09.Modules
 
         public override string ToString()
         {
-            return $"Account[AccountNo={AccountNo},AccountName={AccountName},Balance ={Balance}]";
+            return $"Account[AccountNo = {AccountNo},AccountName = {AccountName},Balance = {Balance}]";
         }
     }
 }

@@ -5,19 +5,28 @@ using System.Threading.Tasks;
 
 namespace Example
 {
-  /// <summary>
-  /// 戦えるものの概念を実装した戦士のクラス
-  /// </summary>
-  public class Warrior : IFight
+  public class Warrior
   {
-    public void Attack()
+    public static int cnt = 0;
+
+    public string name;
+    public int braveNum;
+
+    public Warrior(string pname)
     {
-      Console.WriteLine("戦士は剣で攻撃した");
+      cnt++;
+      name = pname;
+      braveNum = cnt;
     }
 
-    public void Defence(int damage)
+    public void Greet()
     {
-      Console.WriteLine($"戦士は盾で防御して{damage / 2}ダメージをうけた");
+      Console.WriteLine($"こんにちは。{braveNum}人目の戦士{name}です");
+    }
+
+    public static void ShowHeroNum()
+    {
+      Console.WriteLine($"現在、この世界には{cnt}人の戦士がいます");
     }
   }
 }

@@ -9,17 +9,15 @@ static class Program
 
 
         Console.Write("DVDのタイトルを入力してください->");
-        string name = Console.ReadLine();
-        Player dvd = new DVDPlayer(name);
+        Player player = new DVDPlayer(Console.ReadLine()!);
 
-        dvd.UseMachine();
+        player.UseMachine();
 
 
         Console.Write("Bluerayのタイトルを入力してください->");
-        name = Console.ReadLine();
-        Player blu = new BlurayPlayer(name);
+        player = new BlurayPlayer(Console.ReadLine()!);
 
-        blu.UseMachine();
+        player.UseMachine();
 
 
     }

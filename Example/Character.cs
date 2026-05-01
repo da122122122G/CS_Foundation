@@ -10,7 +10,7 @@ namespace Example
     /// </summary>
     public abstract class Character
     {
-        public string Name { get; set; }
+        public string? Name { get; set; }
         /// <summary>
         /// 挨拶をする抽象メソッド
         /// </summary>

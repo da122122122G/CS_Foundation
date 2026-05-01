@@ -7,14 +7,15 @@ static class Program
 {
     static void Main(string[] args)
     {
-        var flashMemory = new FlashMemory();
-        var mouse = new Mouse();
-        var display = new Display();
+        IUSB usb1 = new FlashMemory();
+        usb1.SendData();
+        usb1.ReciveData();
 
-        flashMemory.SendData();
-        flashMemory.ReciveData();
-        mouse.SendData();
-        display.ReciveData();
+        usb1 = new Mouse();
+        usb1.SendData();
+
+        usb1 = new Display();
+        usb1.ReciveData();
 
     }
 }

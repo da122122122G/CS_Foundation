@@ -12,13 +12,12 @@ namespace Ex_03_12.Modules
 
         public override void Play()
         {
-            Console.Write("DVDのタイトルを入力してください->");
-            Console.WriteLine($"DVD: {Console.ReadLine()}を再生しています");
+            Console.WriteLine($"DVD: {Media}を再生しています");
         }
 
         public override void Stop()
         {
-            Console.WriteLine("DVDを停止しました");
+            Console.WriteLine($"DVD: {Media}の再生を停止しました");
         }
     }
 }

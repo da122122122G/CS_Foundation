@@ -14,9 +14,15 @@ namespace Ex_03_12.Modules
             this.Media = Media;
         }
 
-        public void UseMachine();
         public abstract void Play();
         public abstract void Stop();
+
+        public void UseMachine()
+        {
+            Play();
+            Stop();
+        }
+
 
     }
 }

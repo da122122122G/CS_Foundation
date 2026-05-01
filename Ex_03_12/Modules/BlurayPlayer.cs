@@ -11,13 +11,12 @@ namespace Ex_03_12.Modules
 
         public override void Play()
         {
-
             Console.WriteLine($"Bluray: {Media}を再生しています");
         }
 
         public override void Stop()
         {
-            Console.WriteLine("Blurayを停止しました");
+            Console.WriteLine($"Bluray: {Media}を停止しました");
         }
 
     }

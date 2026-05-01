@@ -20,9 +20,9 @@ namespace Ex_03_09.Modules
 
         public virtual void Print()
         {
-            Console.Write("口座番号：" + AccountNo + " ");
-            Console.Write("口座名義：" + AccountName + " ");
-            Console.Write("残高：" + Balance + " ");
+            Console.WriteLine("口座番号：" + AccountNo + " ");
+            Console.WriteLine("口座名義：" + AccountName + " ");
+            Console.WriteLine("残高：" + Balance + " ");
         }
 
         public override string ToString()

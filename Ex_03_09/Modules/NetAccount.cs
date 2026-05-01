@@ -16,7 +16,8 @@ namespace Ex_03_09.Modules
 
         public override void Print()
         {
-            Console.WriteLine($"{base.Print()}ポイント：{Point}");
+            base.Print();
+            Console.WriteLine($"ポイント：{Point}");
         }
 
         public override string ToString()

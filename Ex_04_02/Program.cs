@@ -7,8 +7,11 @@ static class Program
 
 
         Console.Write("年を入力してください->");
+        //DateTime now = DateTime.Now;
 
-        int year1 = int.Parse(Console.ReadLine());
+        int year1 =
+        int.Parse(Console.ReadLine()!);
+        //now.Year;
 
         if (DateTime.IsLeapYear(year1) == true)
         {

@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Net.ServerSentEvents;
-
 using Ex_04_01_Lib;
 
 namespace Ex_04_01;
@@ -9,7 +8,7 @@ static class Program
 {
     static void Main(string[] args)
     {
-        Item item1 = new();
+        Item item1 = new Item();
 
         Console.Write("商品番号を入力してください->");
         item1.ItemNo = int.Parse(Console.ReadLine());

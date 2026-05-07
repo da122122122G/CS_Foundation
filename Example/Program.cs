@@ -9,13 +9,16 @@ static class Program
 {
     static void Main(string[] args)
     {
-        Random random = new Random();
-        Console.WriteLine($"random.Next(1, 6):{random.Next(1, 6)}");
-        Console.WriteLine($"random.NextSingle():{random.NextSingle()}");
-        int[] vs = { 8, 3, 5, 7, 2 };
-        random.Shuffle(vs);
-        Console.WriteLine("random.Shuffle({ 8, 3, 5, 7, 2 });");
-        foreach (int v in vs) { Console.Write(v); }
+        DateTime now = DateTime.Now;
+        Console.WriteLine($"現在日時:{now}");
+        Console.WriteLine($"曜日番号:{now.DayOfWeek}");
+        Console.WriteLine($"年月日:{now.Year}/{now.Month}/{now.Day}");
+        Console.WriteLine($"now.ToLongDateString():{now.ToLongDateString()}");
+        Console.WriteLine($"now.ToLongTimeString():{now.ToLongTimeString()}");
+        Console.WriteLine($"now.ToShortDateString():{now.ToShortDateString()}");
+        Console.WriteLine($"now.ToShortTimeString():{now.ToShortTimeString()}");
+        DateTime after = now.AddDays(40);
+        Console.WriteLine($"after.ToShortDateString():{after.ToShortDateString()}");
     }
 }
 

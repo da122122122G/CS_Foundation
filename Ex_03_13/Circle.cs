@@ -17,7 +17,7 @@ namespace Ex_03_13
             return radius * radius * PI;
         }
 
-        public static double AreaCalculation(int radius)
+        public static double AreaCalculations(int radius)
         {
             return radius * radius * PI;
         }
